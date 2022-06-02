@@ -1,0 +1,144 @@
+// ХЕДЕР
+
+
+.header {
+    border-bottom: 1px solid #ECECEC;
+    background-color: $logo-color;
+}
+
+.header__container,
+.header-nav-logo,
+.header-contacts,
+.site-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-family: $font-logo;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    color: $brand-btn-background;
+}
+
+.logo__dark {
+    font-family: $font-logo;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    color: $brand-btn-background;
+    color: #000000;
+}
+
+.site-nav__link {
+    transition: color $transition-duration $transition-timing-function;
+
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: $brand-color;
+
+    &:hover,
+    &:focus {
+        color: $brand-btn-background;
+    }
+}
+
+.site-nav .site-nav__item,
+.header-contacts .header-contacts__item {
+    margin-right: 50px;
+}
+
+.header-contacts .header-contacts__item:last-child,
+.site-nav .site-nav__item:last-child {
+    margin-right: 0;
+}
+
+.site-nav .site-nav__item:last-child {
+    margin-left: auto;
+}
+
+.header-contacts__link {
+    transition: color $transition-duration $transition-timing-function;
+    
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: $brand-second-color;
+
+    &:hover,
+    &:focus {
+        color: $brand-btn-background;
+    }
+}
+
+.header-contacts__icon {
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    fill: currentColor;
+
+    &.tel {
+        width: 10px;
+        height: 16px;
+    }
+}
+
+.site-nav__item, .header-contacts__item {
+    position: relative;
+}
+
+.site-nav__link--current::after {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: -1px;
+
+    border-radius: 2px;
+    color: $brand-btn-background;
+    background-color: $brand-btn-background;
+
+    content: " ";
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

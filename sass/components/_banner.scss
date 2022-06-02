@@ -1,0 +1,275 @@
+.banner {
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-color: $banner-background;
+
+    height: 600px;
+    max-width: 1600px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Imgban.jpg");
+}
+
+.banner__title {
+    margin-bottom: 30px;
+
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: $logo-color;
+}
+
+.banner__button {
+    border-radius: 4px;
+    height: 50px;
+    border: 1px solid transparent;
+    padding: 10px 32px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    background-color: $brand-btn-background;
+    cursor: pointer;
+    color: $logo-color;
+}
+
+
+/* Модальное окно */
+
+.backdrop {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: visibility $transition-duration $transition-timing-function,
+        opacity $transition-duration $transition-timing-function;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+    position: absolute;
+    min-width: 528px;
+    min-height: 581px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+
+    background: $logo-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.modal__btn {
+    position: absolute;
+    transition: color $transition-duration $transition-timing-function;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+    background-color: $logo-color;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    &:hover {
+        color: $brand-btn-background;
+    }
+}
+
+.modal__icon {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+.backdrop.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal__text {
+    padding-bottom: 12px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    color: $brand-color;
+}
+
+.form {
+    margin-top: 12px;
+}
+
+.form__field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    
+    &:nth-child(4) {
+    margin-bottom: 0;
+}
+}
+
+.form__label {
+    margin-bottom: 4px;
+    text-align: left;
+
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: $brand-second-color;
+}
+
+.form__span {
+    position: relative;
+    color: $brand-color;
+    border: 0;
+}
+
+.form__input {
+    width: 100%;
+    height: 40px;
+    padding: 12px 42px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: outline $transition-duration $transition-timing-function;
+
+}
+
+.form__icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    transition: color $transition-duration $transition-timing-function;
+
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+.form__span:focus-within>.form__input,
+.form__field:focus-within>.form__comment {
+    outline: 1px solid $brand-btn-background;
+}
+
+.form__span:focus-within>.form__icon {
+    color: $brand-btn-background;
+}
+
+.form__comment {
+    width: 100%;
+    height: 120px;
+    padding: 12px 16px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+
+    transition: outline $transition-duration $transition-timing-function;
+
+    &::placeholder {
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5)
+    }
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    white-space: nowrap;
+    clip-path: inset(50%);
+}
+
+.checkbox__icon {
+    display: block;
+    width: 16px;
+    height: 15px;
+    margin-right: 8.38px;
+    border-radius: 2px;
+    outline: 1px solid $brand-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.checkbox__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: $brand-second-color;
+}
+
+.checkbox__link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+    color: $brand-btn-background;
+}
+
+.checkbox:checked+.checkbox__icon {
+    background-color: $brand-btn-background;
+    outline: 1px solid $brand-btn-background;
+    background-image: url(../images/check.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+}
+
+.form__bnt {
+    border-radius: 4px;
+    height: 50px;
+    border: 1px solid transparent;
+    padding: 10px 55px;
+    margin-top: 30px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    background-color: $brand-btn-background;
+    cursor: pointer;
+    color: $logo-color;
+}
+
+
+
+
+
+
+
