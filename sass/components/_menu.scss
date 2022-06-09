@@ -1,0 +1,125 @@
+.menu-btn {
+    display: none;
+
+    @media screen and (min-width:480px) and (max-width:767px) {
+        display: inline-flex;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        color: #000000;
+        z-index: 10;
+    }
+}
+
+.menu-btn .icon-close {
+        display: none;
+    }
+
+.icon-menu {
+    fill: currentColor;
+}
+
+.menu-btn .icon-menu:hover,
+.menu-btn .icon-menu:focus,
+.menu-btn .icon-menu:focus {
+    color: $brand-btn-background;
+}
+
+.menu-btn.is-open .icon-close {
+    @media screen and (min-width:480px) {
+        display: block;
+    }
+}
+
+.menu-btn.is-open .icon-menu {
+    @media screen and (max-width:767px) {
+        display: none;
+    }
+}
+
+.menu-conteiner {
+        z-index: 1;
+        padding: 48px 40px;
+        display: none;
+    
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $logo-color;
+
+    &.is-open {
+        display: flex;
+        flex-direction: column;
+    }
+   
+}
+
+.menu-conteiner__item {
+    margin-bottom: 32px;
+}
+
+.menu-conteiner__item:last-child {
+    margin-bottom: 0;
+}
+
+.menu-conteiner__link {
+    transition: color $transition-duration $transition-timing-function;
+    
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    color: $brand-color;
+}
+
+.menu-conteiner.is-open .header-contacts-mobile {
+    margin-top: auto;
+}
+
+.header-contacts-mobile {
+    @media screen and (min-width:768px) {
+        display: none;
+    }
+}
+
+.header-contacts-mobile__item {
+        margin-bottom: 32px;
+}
+
+.header-contacts-mobile__link {
+        font-weight: 500;
+        letter-spacing: 0.02em;
+}
+
+.header-contacts-mobile__link {
+        font-size: 24px;
+        line-height: 1.17;
+        color: $brand-second-color;
+
+        margin-bottom: 0;
+}
+
+.header-contacts-mobile__link-accent {
+        font-size: 34px;
+        line-height: 1.18;
+        color: $brand-btn-background;
+}
+
+.mobile-social-list {
+        display: flex;
+        margin-top: 64px;
+}
+
+.mobile-social__link {
+        margin-right: 20px;
+
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.22;
+        letter-spacing: 0.02em;
+        color: $brand-btn-background;
+}

@@ -2,12 +2,28 @@
 
 .filtr {
     display: flex;
+
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+    @media screen and (min-width: 768px) {
     justify-content: center;
     margin-bottom: 50px;
+
+    }
 }
 
 .filtr__item {
     margin-right: 8px;
+
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+    margin-bottom: 15px;
+
+    }
+    &:nth-child(n+4) {
+        margin-bottom: 0;
+    }
 
     &:last-child {
         margin-right: 0;
@@ -46,23 +62,53 @@
 }
 
 .portfolio {
-    display: flex;
-    flex-wrap: wrap;
+    @media screen and (min-width: 480px) {
+        display: block;
+    }
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 .portfolio__item {
-    flex-basis: calc((100% - 60px) / 3);
-    margin: 0 30px 30px auto;
     background-color: $logo-color;
 
-    &:nth-child(3n) {
+    @media screen and (min-width: 480px) {
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        flex-basis: calc((100% - 30px) / 2);
+        margin: 0 30px 30px 0;
+
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+        
+        &:last-child {
+            margin-bottom: 0;
+            margin-left: 0;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        flex-basis: calc((100% - 60px) / 3);
+        margin: 0 30px 30px 0;
+        
+        &:nth-child(3n) {
         margin-right: 0;
     }
-    
     &:nth-child(n+7) {
         margin-bottom: 0;
         margin-left: 0;
     }
+}
 }
 
 .port-title {
@@ -70,6 +116,10 @@
     border-bottom: 1px solid #EEEEEE;
     border-right: 1px solid #EEEEEE;
     border-left: 1px solid #EEEEEE;
+
+    @media screen and (min-width: 768px) {
+        flex-grow: 1;
+    }
 }
 
 .portfolio__title {
@@ -104,11 +154,26 @@
     &:focus .card {
         transform: translateY(0);
     }
+
+    @media screen and (min-width: 768px) {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .portfolio__thumb {
     position: relative;
     overflow: hidden;
+}
+.portfolio__thumb img {
+    @media screen and (min-width: 768px) {
+        width: 354px;
+    }
+    
+    @media screen and (min-width: 1200px) {
+        width: 370px;
+    }
 }
 
 .card {

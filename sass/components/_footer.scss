@@ -2,19 +2,38 @@
     font-family: $font-logo;
     font-style: normal;
     font-weight: 700;
+    font-size: 24px;
+    line-height: 1.17;
+    color: $brand-btn-background;
+
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+        display: block;
+        text-align: center;
+    }
+    
+    @media screen and (min-width: 1200px) {
     font-size: 26px;
     line-height: 1.19;
-    color: $brand-btn-background;
+    }
 }
 
 .logo-ligth {
     font-family: $font-logo;
     font-style: normal;
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
+    font-size: 24px;
+    line-height: 1.17;
     color: $brand-btn-background;
     color: $logo-color;
+
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+        text-align: center;
+    }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 26px;
+        line-height: 1.19;
+    }
 }
 
 .footer {
@@ -23,20 +42,33 @@
     background-color: $banner-background;
 }
 
-
 .address {
     margin-top: 20px;
+    text-align: left;
+
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-right: 165px;   
+    }
 }
 
 .footer-address {
-    width: 231px;
-    color: $logo-color;
-    margin-bottom: 9px;
-
     font-style: normal;
     font-size: 14px;
     line-height: 1.71;
+    color: $logo-color;
+    margin-bottom: 8px;
+
+    @media screen and (min-width: 1200px) {
+    width: 231px;
+    margin-bottom: 9px;
+    }
 }
+
 
 .footer-contacts__link {
     transition: color $transition-duration $transition-timing-function;
@@ -68,16 +100,37 @@
     margin-bottom: 20px;
     text-transform: uppercase;
     color: $logo-color;
+
+    @media screen and (min-width: 480px) {
+    text-align: center;
+    }
+}
+
+.tablet {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;   
+    }
+
 }
 
 .container-footer {
+    @media screen and (min-width: 1200px) {
     display: flex;
     justify-content: flex-start;
     align-items: baseline;
+    }
 }
 
 .foot-social {
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+        margin-bottom: 60px;
+    }
+    
+    @media screen and (min-width: 1200px) {
     margin-left: 70px;
+}
 }
 
 .social__link.f {
@@ -98,9 +151,18 @@
 }
 
 .subscribe {
+
+    @media screen and (min-width: 480px) and (max-width: 1199px) {
+    text-align: center;
+    display: block;
+    margin-top: 60px;
+    }
+
+    @media screen and (min-width: 1200px) {
     width: 570px;
     margin-left: 93px;
     margin-right: auto;
+    }
 }
 
 .subscribe-text {
@@ -110,15 +172,22 @@
     line-height: 1.14;
     text-transform: uppercase;
     color: $logo-color;
+
+    @media screen and (min-width: 480px) and (max-width: 1199px) {
+        text-align: center;
+    }
 }
 
 .subscribe-form {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    line-height: 1.25;
+
+    @media screen and (min-width: 1200px) {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 16px;
-    line-height: 1.25;
-    color: rgba(255, 255, 255, 0.6);
+    }
 }
 
 .subscribe__input {
@@ -140,6 +209,10 @@
     &:focus-within {
         outline: 1px solid $team-background;
     }
+
+    @media screen and (min-width: 480px) and (max-width: 1199px) {
+        width: 100%;
+    }
 }
 
 .subscribe__btn {
@@ -159,6 +232,13 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border-color: $brand-btn-background;
+
+    @media screen and (min-width: 480px) and (max-width: 1199px) {
+        margin-top: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .subscribe__icon {

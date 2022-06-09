@@ -1,30 +1,75 @@
 .banner {
-    text-align: center;
-    padding-top: 200px;
-    padding-bottom: 200px;
-    background-color: $banner-background;
+    padding-top: 118px;
+        padding-bottom: 118px;
+        background-color: $banner-background;
+        text-align: center;
 
-    height: 600px;
-    max-width: 1600px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Imgban.jpg");
+        height: 400px;
+        max-width: 480px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-left: auto;
+        margin-right: auto;
+
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url("/images/banner/header-mobile.jpg");
+
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+                background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
+                url("/images/banner/header-mobile@2x.jpg");
+        }
+
+    @media screen and (min-width: 481px) {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url("/images/banner/header-tablet.jpg");
+
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url('/images/banner/header-tablet@2x.jpg');
+        }
+        }
+        
+    @media screen and (min-width: 769px) {
+        padding-top: 200px;
+        padding-bottom: 200px;
+        height: 600px;
+        max-width: 1600px;
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                url("/images/banner/header-desktop.jpg");
+                
+    @media (min-device-pixel-ratio: 2),
+            (-webkit-min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                url('/images/banner/header-desktop@2x.jpg');
+            }
+        }
 }
 
 .banner__title {
-    margin-bottom: 30px;
-
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: $logo-color;
+                margin-bottom: 30px;
+            
+                font-weight: 900;
+                font-size: 26px;
+                line-height: 1.62;
+                text-transform: uppercase;
+                letter-spacing: 0.06em;
+                color: $logo-color;
+            
+            @media screen and (min-width: 1200px) {
+                font-size: 44px;
+                line-height: 1.36;  
+            }
 }
-
+        
 .banner__button {
     border-radius: 4px;
     height: 50px;
@@ -44,8 +89,10 @@
 /* Модальное окно */
 
 .backdrop {
-    z-index: 1;
+    @media screen and (min-width: 480px) {    
+    z-index: 100;
     position: fixed;
+    padding: 93px, 15px;
     top: 0;
     left: 0;
     width: 100%;
@@ -53,22 +100,38 @@
     transition: visibility $transition-duration $transition-timing-function,
         opacity $transition-duration $transition-timing-function;
     background: rgba(0, 0, 0, 0.2);
+    overflow-y: scroll;
+    }
 }
 
 .modal {
-    position: absolute;
-    min-width: 528px;
-    min-height: 581px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 40px;
-
     background: $logo-color;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
+        border-radius: 4px;
+        
+        padding: 40px;   
+        
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    @media screen and (min-width: 480px) and (max-width: 1199px) {
+        min-width: 450px;
+        min-height: 609px;   
+    }
+    
+    @media screen and (min-width: 1200px) {
+        position: absolute;
+        min-width: 528px;
+        min-height: 581px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);  
+    }
+    
 }
 
 .modal__btn {
@@ -219,7 +282,7 @@
     display: block;
     width: 16px;
     height: 15px;
-    margin-right: 8.38px;
+    margin-right: 8px;
     border-radius: 2px;
     outline: 1px solid $brand-color;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -227,19 +290,35 @@
 
 .checkbox__text {
     font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
     letter-spacing: 0.03em;
     color: $brand-second-color;
+
+    @media screen and (min-width: 480px) {
+        font-size: 12px;
+        line-height: 1.17;
+    }
+    
+    @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+    }
 }
 
 .checkbox__link {
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
     letter-spacing: 0.03em;
     text-decoration-line: underline;
     color: $brand-btn-background;
+
+    @media screen and (min-width: 480px) {
+        font-size: 12px;
+        line-height: 1.17;
+    }
+    
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 1.71;
+    }
 }
 
 .checkbox:checked+.checkbox__icon {
