@@ -951,15 +951,13 @@ body {
 }
 
 /* Чем занимаемся */
-@media screen and (max-width: 1199px) {
-  .section--no-padding {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
+.section--no-padding {
+  padding-top: 0;
 }
 
 @media screen and (max-width: 1199px) {
-  .container-mobile {
+  .section--no-padding {
+    padding-bottom: 0;
     display: none;
   }
 }

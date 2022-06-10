@@ -4,15 +4,9 @@
         padding-top: 0;
 
         @media screen and (max-width: 1199px) {
-            padding-bottom: 0;   
+            padding-bottom: 0; 
+            display: none;
         }
-}
-
-
-.container-mobile {
-    @media screen and (max-width: 1199px) {
-        display: none;
-    }   
 }
 
 .section__title {
