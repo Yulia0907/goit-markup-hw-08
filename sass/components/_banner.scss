@@ -1,11 +1,10 @@
 .banner {
-    padding-top: 118px;
+        padding-top: 118px;
         padding-bottom: 118px;
         background-color: $banner-background;
         text-align: center;
 
-        height: 400px;
-        max-width: 480px;
+        max-width: 768px;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -23,10 +22,10 @@
                 url("../images/banner/header-mobile@2x.jpg");
         }
 
-    @media screen and (min-width: 481px) {
+    @media screen and (min-width: 768px) {
         background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
         url("../images/banner/header-tablet.jpg");
-        max-width: 768px;
+        max-width: 1199px;
 
         @media (min-device-pixel-ratio: 2),
         (-webkit-min-device-pixel-ratio: 2),
@@ -37,10 +36,9 @@
         }
         }
         
-    @media screen and (min-width: 769px) {
+    @media screen and (min-width: 1200px) {
         padding-top: 200px;
         padding-bottom: 200px;
-        height: 600px;
         max-width: 1600px;
         background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
                 url("../images/banner/header-desktop.jpg");
@@ -89,8 +87,7 @@
 
 /* Модальное окно */
 
-.backdrop {
-    @media screen and (min-width: 480px) {    
+.backdrop {   
     z-index: 100;
     position: fixed;
     padding: 93px, 15px;
@@ -102,7 +99,6 @@
         opacity $transition-duration $transition-timing-function;
     background: rgba(0, 0, 0, 0.2);
     overflow-y: scroll;
-    }
 }
 
 .modal {
@@ -119,7 +115,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
 
-    @media screen and (min-width: 480px) and (max-width: 1199px) {
+    @media screen and (max-width: 1199px) {
         min-width: 450px;
         min-height: 609px;   
     }
@@ -294,10 +290,8 @@
     letter-spacing: 0.03em;
     color: $brand-second-color;
 
-    @media screen and (min-width: 480px) {
-        font-size: 12px;
-        line-height: 1.17;
-    }
+    font-size: 12px;
+    line-height: 1.17;
     
     @media screen and (min-width: 1200px) {
     font-size: 14px;
@@ -311,10 +305,8 @@
     text-decoration-line: underline;
     color: $brand-btn-background;
 
-    @media screen and (min-width: 480px) {
         font-size: 12px;
         line-height: 1.17;
-    }
     
     @media screen and (min-width: 1200px) {
         font-size: 14px;

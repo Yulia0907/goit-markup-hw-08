@@ -1,36 +1,42 @@
 .header {
-    @media screen and (min-width:480px) { 
         position: relative;
         border-bottom: 1px solid #ECECEC;
-        background-color: $logo-color;
-    }      
+        background-color: $logo-color;     
 }
 
 .header__container {
     @media screen and (min-width:768px) {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     }  
 }
 
 .header-nav-logo {
-    @media screen and (min-width:480px) {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    }
-}
 
-.header-contacts {
-    
-    @media screen and (min-width:480px) {
-        display: none;
+    @media screen and (max-width: 767px) {
+    justify-content: space-between;
     }
 
     @media screen and (min-width: 768px) {
-        display: block;
-        
+        margin-right: 88px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-right: 93px;
+    }
+
+    
+}
+
+.header-contacts {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: block; 
+
+        margin-left: auto;
     }
 
     @media screen and (min-width:1200px) {
@@ -46,7 +52,7 @@
     @media screen and (min-width:768px) {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+  
     }
 }
 
@@ -57,27 +63,19 @@
     font-size: 24px;
     line-height: 1.17;
     color: $brand-btn-background;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    @media screen and (min-width:480px) {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        padding-top: 16px;
-        padding-bottom: 16px;
-    }
-
-    @media screen and (min-width: 768px) {
-        margin-right: 88px;
-    }
-
+    padding-top: 16px;
+    padding-bottom: 16px;
+ 
     @media screen and (min-width: 1200px) {
-        margin-right: 93px;
         font-size: 26px;
         line-height: 1.19;
     }
 }
-
 
 .logo__dark {
     font-family: $font-logo;
@@ -94,34 +92,37 @@
     }
 }
 
-
 .site-nav__link {
     @media screen and (min-width:768px) {
     transition: color $transition-duration $transition-timing-function;
 
     font-weight: 500;
-    font-size: 40px;
-    line-height: 1.18;
+    font-size: 14px;
+    line-height: 1.14;
     letter-spacing: 0.02em;
     color: $brand-color;
 
-        display: flex;
-        align-items: center;
-        padding-top: 32px;
-        padding-bottom: 32px;
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
         
-        font-size: 14px;
-        line-height: 1.14;
+    
     }
 
     &:hover,
     &:focus {
-        color: $brand-btn-background;
+    color: $brand-btn-background;
     }
 }
-.site-nav .site-nav__item {
+
+.site-nav__item {
     @media screen and (min-width: 768px) {
         margin-right: 50px;
+
+        &:last-child {
+            margin-right: 0;
+        }
     }
 }
 
@@ -134,21 +135,24 @@
 }
 
 .header-contacts .header-contacts__item {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 
     @media screen and (min-width: 1200px) {
         margin-right: 50px;
-    }
-}
 
-.header-contacts .header-contacts__item:last-child {
-    @media screen and (min-width: 768px) {
-    margin-right: 0;
+        &:last-child {
+            margin-right: 0;
+        }
     }
 }
 
 .header-contacts__link {
-
-    @media screen and (min-width: 768px) {
     font-weight: 500;
     letter-spacing: 0.02em;
     font-size: 12px;
@@ -156,7 +160,6 @@
 
     color: $brand-second-color;
     transition: color $transition-duration $transition-timing-function;
-    }
 
     @media screen and (min-width: 1200px) {
     display: flex;
@@ -175,10 +178,10 @@
 }
 
 .header-contacts__icon {
-        width: 14px;
-        height: 10px;
-        margin-right: 8px;
-        fill: currentColor;
+    width: 14px;
+    height: 10px;
+    margin-right: 8px;
+    fill: currentColor;
 
     @media screen and (min-width:1200px) {
     width: 16px;
@@ -189,10 +192,10 @@
     &.tel {
         width: 10px;
         height: 14px;
-
-        @media screen and (min-width: 768px) {
-            width: 10px;
-            height: 16px;
+        
+       @media screen and (min-width: 768px) {
+        width: 10px;
+        height: 16px;
         }
     }
 }

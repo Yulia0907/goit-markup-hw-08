@@ -6,14 +6,15 @@
     line-height: 1.17;
     color: $brand-btn-background;
 
-    @media screen and (min-width: 480px) and (max-width: 767px) {
-        display: block;
-        text-align: center;
+    @media screen and (max-width: 767px) {
+    display: block;
+    text-align: center;
     }
     
     @media screen and (min-width: 1200px) {
     font-size: 26px;
     line-height: 1.19;
+    text-align: left;
     }
 }
 
@@ -26,13 +27,14 @@
     color: $brand-btn-background;
     color: $logo-color;
 
-    @media screen and (min-width: 480px) and (max-width: 767px) {
+    @media screen and (max-width: 767px) {
         text-align: center;
     }
 
     @media screen and (min-width: 1200px) {
         font-size: 26px;
         line-height: 1.19;
+        text-align: left;
     }
 }
 
@@ -46,13 +48,14 @@
     margin-top: 20px;
     text-align: left;
 
-    @media screen and (min-width: 480px) and (max-width: 767px) {
+    @media screen and (max-width: 767px) {
         text-align: center;
         margin-bottom: 60px;
     }
     
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-        margin-right: 165px;   
+    @media screen and (min-width: 768px) and (max-width: 1199px) { 
+        margin-bottom: 0; 
+        text-align: center;
     }
 }
 
@@ -100,16 +103,13 @@
     margin-bottom: 20px;
     text-transform: uppercase;
     color: $logo-color;
-
-    @media screen and (min-width: 480px) {
     text-align: center;
-    }
 }
 
 .tablet {
     @media screen and (min-width: 768px) {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: baseline;   
     }
 
@@ -124,10 +124,6 @@
 }
 
 .foot-social {
-    @media screen and (min-width: 480px) and (max-width: 767px) {
-        margin-bottom: 60px;
-    }
-    
     @media screen and (min-width: 1200px) {
     margin-left: 70px;
 }
@@ -150,9 +146,21 @@
     }
 }
 
-.subscribe {
+.foot-address {
+    text-align: center;
+    margin-bottom: 60px;
 
-    @media screen and (min-width: 480px) and (max-width: 1199px) {
+    @media screen and (min-width: 768px) {
+        margin-bottom: 0;
+    } 
+    
+    @media screen and (min-width: 1200px) {
+        text-align: left;
+    }
+}
+
+.subscribe {
+    @media screen and (max-width: 1199px) {
     text-align: center;
     display: block;
     margin-top: 60px;
@@ -173,7 +181,7 @@
     text-transform: uppercase;
     color: $logo-color;
 
-    @media screen and (min-width: 480px) and (max-width: 1199px) {
+    @media screen and (max-width: 1199px) {
         text-align: center;
     }
 }
@@ -193,7 +201,6 @@
 .subscribe__input {
     width: 358px;
     padding: 15px 16px;
-    margin-right: 12px;
 
     font-weight: 400;
     font-size: 16px;
@@ -210,8 +217,16 @@
         outline: 1px solid $team-background;
     }
 
-    @media screen and (min-width: 480px) and (max-width: 1199px) {
+    @media screen and (max-width: 767px) {
         width: 100%;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        width: 450px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-right: 12px;
     }
 }
 
@@ -233,7 +248,7 @@
     border-radius: 4px;
     border-color: $brand-btn-background;
 
-    @media screen and (min-width: 480px) and (max-width: 1199px) {
+    @media screen and (max-width: 1199px) {
         margin-top: 20px;
         display: block;
         margin-left: auto;
@@ -249,8 +264,3 @@
 .subscribe__btn-span {
     margin-right: 10px;
 }
-
-
-
-
-

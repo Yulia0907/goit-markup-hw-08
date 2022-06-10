@@ -22,7 +22,7 @@
                 <a href="./index.html" lang="en" class="logo">Web<span class="logo__dark">Studio</span></a>
                 <button type="button" class="menu-btn" aria-expanded="false" aria-controls="menu-conteiner"
                     data-menu-button>
-                    <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                    <svg width="24" height="16" aria-label="Переключатель мобильного меню">
                         <use class="icon-close" href="./images/icons.svg#icon-close"></use>
                         <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
                     </svg>
@@ -35,7 +35,7 @@
                             class="menu-conteiner__link">Студия</a>
                     </li>
                     <li class="menu-conteiner__item">
-                        <a href="./portfolio.html" style="color:#2196F3;" class="menu-conteiner__link">Портфолио</a>
+                        <a href="./portfolio.html"  style="color:#2196F3;" class="menu-conteiner__link  menu-conteiner__link--current">Портфолио</a>
                     </li>
                     <li class="menu-conteiner__item">
                         <a href="#" class="menu-conteiner__link">Контакты</a>
@@ -71,7 +71,7 @@
             </div>
             <ul class="site-nav">
                 <li class="site-nav__item">
-                    <a href="./index.html"  class="site-nav__link">Студия</a>
+                    <a href="./index.html" class="site-nav__link">Студия</a>
                 </li>
                 <li class="site-nav__item">
                     <a href="./portfolio.html" style="color:#2196F3;" class="site-nav__link site-nav__link--current">Портфолио</a>
@@ -123,8 +123,35 @@
                     <li class="portfolio__item">
                         <a href="" class="portfolio__link">
                             <div class="portfolio__thumb">
-                            <img srcset="./images/allservices/img5.jpg 1x, ./images/allservices/img5@2x.jpg 2x"
-                            src="./images/allservices/img5.jpg" alt="трое людей" width="450" height="294" />
+                                <picture>
+                                    <source 
+                                    media="(min-width: 1200px)" 
+                                    srcset="
+                                    ./images/allservices/port-1-lg.jpg 1x, 
+                                    ./images/allservices/port-1-lg@2x.jpg 2x" 
+                                    type="image/jpeg" />
+                                
+                                    <source 
+                                    media="(min-width: 768px)" 
+                                    srcset="
+                                    ./images/allservices/port-1-md.jpg 1x, 
+                                    ./images/allservices/port-1-md@2x.jpg 2x" 
+                                    type="image/jpeg" />
+                                
+                                    <source 
+                                    media="(max-width: 767px)" 
+                                    srcset="
+                                    ./images/allservices/port-1-sm.jpg 1x, 
+                                    ./images/allservices/port-1-sm@2x.jpg 2x" 
+                                    type="image/jpeg" />
+                                
+                                    <img 
+                                    src="./images/allservices/port-1-sm.jpg" 
+                                    alt="трое людей" 
+                                    width="450" 
+                                    height="294" 
+                                    loading="lazy" />
+                                </picture>
                             <div class="card"> 
                                 <p class="card__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                             </div>
@@ -138,8 +165,35 @@
             <li class="portfolio__item">
                 <a href="" class="portfolio__link">
                     <div class="portfolio__thumb">
-                    <img srcset="./images/allservices/img6.jpg 1x, ./images/allservices/img6@2x.jpg 2x"
-                    src="./images/allservices/img6.jpg" alt="ддвое парнейиграют в баскетбол" width="450" height="294" />
+                        <picture>
+                            <source 
+                            media="(min-width: 1200px)" 
+                            srcset="
+                            ./images/allservices/port-2-lg.jpg 1x, 
+                            ./images/allservices/port-2-lg@2x.jpg 2x" 
+                            type="image/jpeg" />
+                        
+                            <source 
+                            media="(min-width: 768px)" 
+                            srcset="
+                            ./images/allservices/port-2-md.jpg 1x, 
+                            ./images/allservices/port-2-md@2x.jpg 2x" 
+                            type="image/jpeg" />
+                        
+                            <source
+                             media="(max-width: 767px)" 
+                            srcset="
+                            ./images/allservices/port-2-sm.jpg 1x, 
+                            ./images/allservices/port-2-sm@2x.jpg 2x" 
+                            type="image/jpeg" />
+                        
+                            <img 
+                            src="./images/allservices/port-2-sm.jpg" 
+                            alt="двое парнейиграют в баскетбол" 
+                            width="450" 
+                            height="294" 
+                            loading="lazy" />
+                        </picture>
                     <div class="card"> 
                         <p class="card__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                     </div>
@@ -153,8 +207,36 @@
             <li class="portfolio__item">
                 <a href="" class="portfolio__link">
                     <div class="portfolio__thumb">
-                    <img srcset="./images/allservices/img7.jpg 1x, ./images/allservices/img7@2x.jpg 2x"
-                    src="./images/allservices/img7.jpg" alt="логотип с рыбой" width="450" height="294" />
+                        <picture>
+                            <source 
+                            media="(min-width: 1200px)" 
+                            srcset="
+                            ./images/allservices/port-3-lg.jpg 1x, 
+                            ./images/allservices/port-3-lg@2x.jpg 2x"
+                                type="image/jpeg" />
+                        
+                            <source 
+                            media="(min-width: 768px)" 
+                            srcset="
+                            ./images/allservices/port-3-md.jpg 1x, 
+                            ./images/allservices/port-3-md@2x.jpg 2x"
+                                type="image/jpeg" />
+                        
+                            <source 
+                            media="(max-width: 767px)" 
+                            srcset="
+                            ./images/allservices/port-3-sm.jpg 1x, 
+                            ./images/allservices/port-3-sm@2x.jpg 2x"
+                                type="image/jpeg" />
+                        
+                            <img 
+                            src="./images/allservices/port-3-sm.jpg" 
+                            alt="логотип с рыбой" 
+                            width="450" 
+                            height="294"
+                                loading="lazy" />
+                        </picture>
+            
                     <div class="card"> 
                         <p class="card__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                     </div>
@@ -168,8 +250,35 @@
             <li class="portfolio__item">
                 <a href="" class="portfolio__link">
                     <div class="portfolio__thumb">
-                    <img srcset="./images/allservices/img8.jpg 1x, ./images/allservices/img8@2x.jpg 2x"
-                    src="./images/allservices/img8.jpg" alt="наушники" width="450" height="294" />
+                        <picture>
+                            <source 
+                            media="(min-width: 1200px)" 
+                            srcset="
+                                                    ./images/allservices/port-4-lg.jpg 1x, 
+                                                    ./images/allservices/port-4-lg@2x.jpg 2x" 
+                                                    type="image/jpeg" />
+                        
+                            <source 
+                            media="(min-width: 768px)" 
+                            srcset="
+                                                    ./images/allservices/port-4-md.jpg 1x, 
+                                                    ./images/allservices/port-4-md@2x.jpg 2x" 
+                                                    type="image/jpeg" />
+                        
+                            <source 
+                            media="(max-width: 767px)" 
+                            srcset="
+                                                    ./images/allservices/port-4-sm.jpg 1x, 
+                                                    ./images/allservices/port-4-sm@2x.jpg 2x" 
+                                                    type="image/jpeg" />
+                        
+                            <img 
+                            src="./images/allservices/port-4-sm.jpg" 
+                            alt="наушники" 
+                            width="450"
+                             height="294"
+                            loading="lazy" />
+                        </picture>
                     <div class="card"> 
                         <p class="card__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                     </div>
@@ -183,8 +292,35 @@
             <li class="portfolio__item">
                 <a href="" class="portfolio__link">
                     <div class="portfolio__thumb">
-                    <img srcset="./images/allservices/img9.jpg 1x, ./images/allservices/img9@2x.jpg 2x"
-                    src="./images/allservices/img9.jpg" alt="две коробки" width="450" height="294" />
+                    <picture>
+                        <source 
+                        media="(min-width: 1200px)" 
+                        srcset="
+                        /images/allservices/port-5-lg.jpg 1x, 
+                        ./images/allservices/port-5-lg@2x.jpg 2x" 
+                        type="image/jpeg" />
+                    
+                        <source 
+                        media="(min-width: 768px)" 
+                        srcset="
+                        ./images/allservices/port-5-md.jpg 1x, 
+                        ./images/allservices/port-5-md@2x.jpg 2x" 
+                        type="image/jpeg" />
+                    
+                        <source
+                         media="(max-width: 767px)" 
+                        srcset="
+                        ./images/allservices/port-5-sm.jpg 1x, 
+                        ./images/allservices/port-5-sm@2x.jpg 2x"
+                         type="image/jpeg" />
+                    
+                        <img 
+                        src="./images/allservices/port-5-sm.jpg" 
+                        alt="две коробки" 
+                        width="450" 
+                        height="294" 
+                        loading="lazy" />
+                    </picture>
                     <div class="card"> 
                         <p class="card__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                     </div>
@@ -198,8 +334,21 @@
             <li class="portfolio__item">
                 <a href="" class="portfolio__link">
                     <div class="portfolio__thumb">
-                    <img srcset="./images/allservices/img10.jpg 1x, ./images/allservices/img10@2x.jpg 2x"
-                    src="./images/allservices/img10.jpg" alt="монитор с картой мира" width="450" height="294" />
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="
+                                                /images/allservices/port-6-lg.jpg 1x, 
+                                                ./images/allservices/port-6-lg@2x.jpg 2x" type="image/jpeg" />
+                        
+                            <source media="(min-width: 768px)" srcset="
+                                                ./images/allservices/port-6-md.jpg 1x, 
+                                                ./images/allservices/port-6-md@2x.jpg 2x" type="image/jpeg" />
+                        
+                            <source media="(max-width: 767px)" srcset="
+                                                ./images/allservices/port-6-sm.jpg 1x, 
+                                                ./images/allservices/port-6-sm@2x.jpg 2x" type="image/jpeg" />
+                        
+                            <img src="./images/allservices/port-6-sm.jpg" alt="монитор с картой мира" width="450" height="294" loading="lazy" />
+                        </picture>
                     <div class="card"> 
                         <p class="card__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                     </div>
@@ -213,8 +362,33 @@
             <li class="portfolio__item">
                 <a href="" class="portfolio__link">
                     <div class="portfolio__thumb">
-                    <img srcset="./images/allservices/img11.jpg 1x, ./images/allservices/img11@2x.jpg 2x"
-                    src="./images/allservices/img11.jpg" alt="журнал" width="450" height="294" />
+                        <picture>
+                            <source 
+                            media="(min-width: 1200px)" 
+                            srcset="
+                            /images/allservices/port-7-lg.jpg 1x, 
+                            ./images/allservices/port-7-lg@2x.jpg 2x" type="image/jpeg" />
+                        
+                            <source 
+                            media="(min-width: 768px)" 
+                            srcset="
+                            ./images/allservices/port-7-md.jpg 1x, 
+                            ./images/allservices/port-7-md@2x.jpg 2x" type="image/jpeg" />
+                        
+                            <source 
+                            media="(max-width: 767px)" 
+                            srcset="
+                            ./images/allservices/port-7-sm.jpg 1x, 
+                            ./images/allservices/port-7-sm@2x.jpg 2x" type="image/jpeg" />
+                        
+                            <img 
+                            src="./images/allservices/port-7-sm.jpg" 
+                            alt="журнал" 
+                            width="450" 
+                            height="294" 
+                            loading="lazy" />
+                        </picture>
+   
                     <div class="card"> 
                         <p class="card__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                     </div>
@@ -228,8 +402,33 @@
             <li class="portfolio__item">
                 <a href="" class="portfolio__link">
                     <div class="portfolio__thumb">
-                    <img srcset="./images/allservices/img12.jpg 1x, ./images/allservices/img12@2x.jpg 2x"
-                    src="./images/allservices/img12.jpg" alt="этикетка" width="450" height="294" />
+                        <picture>
+                            <source 
+                            media="(min-width: 1200px)" 
+                            srcset="
+                                                /images/allservices/port-8-lg.jpg 1x, 
+                                                ./images/allservices/port-8-lg@2x.jpg 2x" type="image/jpeg" />
+                        
+                            <source 
+                            media="(min-width: 768px)" 
+                            srcset="
+                                                ./images/allservices/port-8-md.jpg 1x, 
+                                                ./images/allservices/port-8-md@2x.jpg 2x" type="image/jpeg" />
+                        
+                            <source 
+                            media="(max-width: 767px)" 
+                            srcset="
+                                                ./images/allservices/port-8-sm.jpg 1x, 
+                                                ./images/allservices/port-8-sm@2x.jpg 2x" type="image/jpeg" />
+                        
+                            <img 
+                            src="./images/allservices/port-8-sm.jpg"
+                             alt="этикетка" 
+                            width="450" 
+                            height="294" 
+                            loading="lazy" />
+                        </picture>
+     
                     <div class="card"> 
                         <p class="card__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                     </div>
@@ -243,8 +442,34 @@
             <li class="portfolio__item">
                 <a href="" class="portfolio__link">
                     <div class="portfolio__thumb">
-                    <img srcset="./images/allservices/img13.jpg 1x, ./images/allservices/img13@2x.jpg 2x"
-                    src="./images/allservices/img13.jpg" alt="работанадноутбуком" width="450" height="294" />
+                        <picture>
+                            <source 
+                            media="(min-width: 1200px)" 
+                            srcset="
+                            ./images/allservices/port-9-lg.jpg 1x, 
+                            ./images/allservices/port-9-lg@2x.jpg 2x" 
+                                                type="image/jpeg" />
+                        
+                            <source 
+                            media="(min-width: 768px)" 
+                            srcset="
+                            ./images/allservices/port-9-md.jpg 1x, 
+                            ./images/allservices/port-9-md@2x.jpg 2x" 
+                                                type="image/jpeg" />
+                        
+                            <source 
+                            media="(max-width: 767px)" 
+                            srcset="
+                            ./images/allservices/port-9-sm.jpg 1x, 
+                            ./images/allservices/port-9-sm@2x.jpg 2x" 
+                                                type="image/jpeg" />
+                        
+                            <img 
+                            src="./images/allservices/port-9-sm.jpg" 
+                            alt="работа над ноутбуком" 
+                            width="450" 
+                            height="294" loading="lazy" />
+                        </picture>
                     <div class="card"> 
                         <p class="card__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                     </div>
@@ -326,7 +551,7 @@
             </form>
         </div>
     </div>
-</footer> -->
+</footer>
 
 <script src="./js/mobile-menu.js"></script>
 
