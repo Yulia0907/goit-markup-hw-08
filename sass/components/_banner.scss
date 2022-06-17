@@ -114,8 +114,10 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        
+        max-width: 450px;
 
-    @media screen and (max-width: 1199px) {
+    @media screen and (min-width: 480px) and (max-width: 1199px) {
         min-width: 450px;
         min-height: 609px;   
     }
